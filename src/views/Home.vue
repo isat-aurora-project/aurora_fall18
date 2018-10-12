@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="This is a test"/>
+    <HelloWorld msg="This is a test made by Morgan"/>
   </div>
 </template>
 
