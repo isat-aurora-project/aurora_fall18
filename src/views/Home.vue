@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="JMU Logo" src="../assets/jmulogo.png">
+    <img alt="Aurora" src="../assets/aurora.png">
     <HelloWorld msg="Welcome to ISAT 345 Aurora Project"/>
   </div>
 </template>
