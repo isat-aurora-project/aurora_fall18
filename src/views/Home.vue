@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="This is a test"/>
+    <img alt="JMU Logo" src="../assets/jmulogo.png">
+    <HelloWorld msg="Welcome to ISAT 345 Aurora Project"/>
   </div>
 </template>
 
