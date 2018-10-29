@@ -4,8 +4,7 @@
         <form class="register-form">
           <input type="text" placeholder="user name"/>
           <input type="text" placeholder="password"/>
-          <input type="text" placeholder="email id"/>
-          <button> Create</button>
+          <button>Login</button>
         </form>
     </div>
   </div>
