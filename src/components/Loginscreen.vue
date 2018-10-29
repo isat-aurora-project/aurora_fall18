@@ -1,15 +1,19 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      To upload a light show for Dr. Benton's office, please go to the Upload tab and follow the directions. 
-    </p>
+  <div class="login">
+    <div class="form">
+        <form class="register-form">
+          <input type="text" placeholder="user name"/>
+          <input type="text" placeholder="password"/>
+          <input type="text" placeholder="email id"/>
+          <button> Create</button>
+        </form>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "Loginscreen",
   props: {
     msg: String
   }
