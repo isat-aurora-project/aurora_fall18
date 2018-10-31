@@ -1,7 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
-import Login from "./components/Loginscreen.vue";
+import LoginComponent from "./components/Loginscreen.vue";
+import SecureComponent from "./components/HelloWorld.vue";
 
 Vue.use(Router);
 
@@ -11,9 +12,21 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "home",
-      component: Home
+      redirect:{
+        name:"login"
+      }
     },
+    {
+      path:"/login",
+      name:"login",
+      component:LoginComponent
+    },
+    {
+      path:'/home',
+      name:"home",
+      component:SecureComponent
+    },
+    
     {
       path: "/upload",
       name: "upload",
@@ -23,10 +36,5 @@ export default new Router({
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/Upload.vue")
     },
-    {
-      path: "/login",
-      name: "login",
-      component: Login
-    }
   ]
 });

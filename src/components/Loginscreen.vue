@@ -1,38 +1,47 @@
 <template>
-  <div class="login">
-    <div class="form">
-        <form class="register-form">
-          <input type="text" placeholder="user name"/>
-          <input type="text" placeholder="password"/>
-          <button>Login</button>
-        </form>
+    <div id="login">
+        <h1>Login</h1>
+        <input type="text" name="username" v-model="input.username" placeholder="Username" />
+        <input type="password" name="password" v-model="input.password" placeholder="Password" />
+        <button type="button" v-on:click="login()">Login</button>
     </div>
-  </div>
 </template>
 
 <script>
-export default {
-  name: "Loginscreen",
-  props: {
-    msg: String
-  }
-};
+    export default {
+        name: 'Login',
+        data() {
+            return {
+                input: {
+                    username: "",
+                    password: ""
+                }
+            }
+        },
+        methods: {
+            login() {
+                if(this.input.username != "" && this.input.password != "") {
+                    if(this.input.username == this.$parent.mockAccount.username && this.input.password == this.$parent.mockAccount.password) {
+                        this.$emit("authenticated", true);
+                        this.$router.replace({ name: "home" });
+                    } else {
+                        alert("The username and / or password is incorrect");
+                    }
+                } else {
+                    alert("A username and password must be present");
+                }
+            }
+        }
+    }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+<style scoped>
+    #login {
+        width: 500px;
+        border: 1px solid #CCCCCC;
+        background-color: #FFFFFF;
+        margin: auto;
+        margin-top: 200px;
+        padding: 20px;
+    }
 </style>
