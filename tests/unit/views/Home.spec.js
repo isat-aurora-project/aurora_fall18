@@ -4,7 +4,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
 
 describe("Home.vue", () => {
   it("renders the correct welcome message", () => {
-    const msg = "This is a test";
+    const msg = "Welcome to ISAT 345 Aurora Project\nTo upload a light show for Dr. Benton's office, please go to the Upload tab and follow the directions.";
     const wrapper = mount(Home);
     expect(wrapper.contains(HelloWorld)).toBe(true);
     console.log(wrapper.find(HelloWorld).attributes());
