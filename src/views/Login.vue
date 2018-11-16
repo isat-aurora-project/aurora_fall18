@@ -1,10 +1,33 @@
 <template>
-    <div class="login">
-        <h1>Login</h1>
-        <input type="text" name="username" v-model="input.username" placeholder="Username" />
-        <input type="password" name="password" v-model="input.password" placeholder="Password" />
-        <button type="button" v-on:click="login()">Login</button>
-    </div>
+    <ion-content padding="true" class="manual-ios-statusbar-padding">
+        <div class="spacer" style="width: 300px; height: 60px;"></div>
+        <div>
+        <img src="img/UpMXuuD3RRmVOyUcWSi2_aurora.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+        </div>
+        <form id="login-form1" class="list">
+        <ion-list id="login-list1">
+            <ion-item>
+            <ion-label class="item item-input" id="login-input1">
+            <span class="input-label">Username</span>
+            <input type="text" name="username" v-model="input.username" placeholder="Username" />
+            </ion-label>
+            </ion-item>
+            <ion-item>
+            <ion-label class="item item-input" id="login-input2">
+            <span class="input-label">Password</span>
+            <input type="password" name="password" v-model="input.password" placeholder="Password" />
+            </ion-label>
+            </ion-item>
+        </ion-list>
+        <div class="spacer" style="width: 300px; height: 40px;"></div>
+        <ion-button type="button" v-on:click="login()" id="login-button1" class="button button-stable button-block">Login</ion-button>
+        
+        <div class="spacer" style="height: 40px;"></div>
+        <div>
+            <img src="img/cise-logo.jpg" style="display: block; width: 45%; height: auto; margin-left: auto; margin-right: auto;">
+        </div>
+        </form>
+    </ion-content>
 </template>
 
 <script>
