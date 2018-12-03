@@ -7,13 +7,13 @@
         <form id="login-form1" class="list">
         <ion-list id="login-list1">
             <ion-item>
-            <ion-label class="item item-input" id="login-input1" style="display: block; width: 300px; height: 49px; margin-left: auto; margin-right: auto;">
+            <ion-label class="list list-input" id="login-input1" style="display: block; width: 300px; height: 49px; text-align: center;">
             <span class="input-label">Username </span>
             <input type="text" name="username" v-model="input.username" placeholder="Username" />
             </ion-label>
             </ion-item>
             <ion-item>
-            <ion-label class="item item-input" id="login-input2" style="display: block; width: 300px; height: 49px; margin-left: auto; margin-right: auto;">
+            <ion-label class="list list-input" id="login-input2" style="display: block; width: 300px; height: 49px; text-align: center;">
             <span class="input-label">Password </span>
             <input type="password" name="password" v-model="input.password" placeholder="Password" />
             </ion-label>

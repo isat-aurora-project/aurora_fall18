@@ -1,9 +1,9 @@
 <template>
   <ion-app>
-    <ion-header>
+    <ion-header style="text-align: center;">
       <ion-navbar class="bar-light">
         <ion-nav-back-button></ion-nav-back-button>
-        <router-link  v-if="authenticated" to="/home" replace>| Home |</router-link>
+        <router-link v-if="authenticated" to="/home" replace>| Home |</router-link>
         <router-link v-if="authenticated" to="/upload"> Upload |</router-link>
         <router-link v-if="authenticated" to="/login" v-on:click.native="logout()" replace> Logout |</router-link>
       </ion-navbar>
