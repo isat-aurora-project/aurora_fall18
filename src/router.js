@@ -23,6 +23,11 @@ export default new Router({
     },
 
     {
+      path:"/signup",
+      name:"signup",
+    },
+
+    {
       path:'/home',
       name:"home",
       component:SecureComponent
