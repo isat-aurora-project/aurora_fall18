@@ -12,21 +12,21 @@ export default new Router({
   routes: [
     {
       path: "/",
-      redirect:{
-        name:"login"
+      redirect: {
+        name: "login"
       }
     },
     {
-      path:"/login",
-      name:"login",
-      component:LoginComponent
+      path: "/login",
+      name: "login",
+      component: LoginComponent
     },
     {
-      path:'/home',
-      name:"home",
-      component:SecureComponent
+      path: "/home",
+      name: "home",
+      component: SecureComponent
     },
-    
+
     {
       path: "/upload",
       name: "upload",
@@ -35,6 +35,6 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/Upload.vue")
-    },
+    }
   ]
 });
