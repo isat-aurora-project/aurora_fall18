@@ -1,13 +1,15 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link  v-if="authenticated" to="/home" replace>Home |</router-link>
-      <router-link v-if="authenticated" to="/upload"> Upload |</router-link>
-      <router-link v-if="authenticated" to="/login" v-on:click.native="logout()" replace> Logout</router-link>
-      
-    </div>
+  <ion-app>
+    <ion-header style="text-align: center;">
+      <ion-navbar class="bar-light">
+        <ion-nav-back-button></ion-nav-back-button>
+        <router-link v-if="authenticated" to="/home" replace>| Home |</router-link>
+        <router-link v-if="authenticated" to="/upload"> Upload |</router-link>
+        <router-link v-if="authenticated" to="/login" v-on:click.native="logout()" replace> Logout |</router-link>
+      </ion-navbar>
+    </ion-header>
     <router-view @authenticated="setAuthenticated"/>
-  </div>
+  </ion-app>
 
 </template>
 
@@ -25,16 +27,22 @@ import axios from "axios";
       if(!this.authenticated){
         this.$router.replace({ name: "login"});
       }
+    };
+  },
+  mounted() {
+    if (!this.authenticated) {
+      this.$router.replace({ name: "login" });
+    }
+  },
+  methods: {
+    setAuthenticated(status) {
+      this.authenticated = status;
     },
-    methods: {
-      setAuthenticated(status){
-        this.authenticated=status;
-      },
-      logout(){
-        this.authenticated=false;
-      }
+    logout() {
+      this.authenticated = false;
     }
   }
+};
 </script>
 
 <style lang="scss">
