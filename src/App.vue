@@ -19,10 +19,6 @@ import axios from "axios";
     data(){
       return{
         authenticated: false,
-        mockAccount: {
-          username:"tucker",
-          password:"admin"
-        }
       }
     },
     mounted(){

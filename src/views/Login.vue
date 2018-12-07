@@ -56,7 +56,7 @@
             },
 
             signup() {
-                this.$router.replace({name:"signup"});
+                this.$router.replace({ name: "signup" });
             }
         }
     }
