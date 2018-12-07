@@ -31,35 +31,50 @@
 </template>
 
 <script>
-export default {
-  name: "Login",
-  data() {
-    return {
-      input: {
-        username: "",
-        password: ""
-      }
-    };
-  },
-  methods: {
-    login() {
-      if (this.input.username != "" && this.input.password != "") {
-        if (
-          this.input.username == this.$parent.mockAccount.username &&
-          this.input.password == this.$parent.mockAccount.password
-        ) {
-          this.$emit("authenticated", true);
-          this.$router.replace({ name: "home" });
-        } else {
-          alert("The username and / or password is incorrect");
-        }
-      } else {
-        alert("A username and password must be present");
-      }
-    }
-  }
-};
-</script>
+ import axios from "axios";
+    export default {
+        name: 'Login',
+        data() {
+            return {
+                input: {
+                    username: "",
+                    password: ""
+                }
+            }
+        },
+        methods: {
+            login() {
+                var link = "https://wt-a0f01f0b50faf36ea1feab5c1f6c544c-0.sandbox.auth0-extend.com/Aurora-mongoDB/search/";
+                
+                if(this.input.username != "" && this.input.password != "") {
+                        link = link + this.input.username;
+                        var result = axios.get(link)
+                            .then(res => {
+                                // handle the results
+                                if (this.input.password === res.data.password) {
+                                    this.$emit("authenticated", true);
+                                    this.$router.replace({ name: "home" });
+                                } else {
+                                    alert("The username and / or password is incorrect"); 
+                                }
+                            })
+                            .catch(err => {
+                                // handle error
+                                alert("there was an http error: " + err.status);
+                            });
+                        //var result = JSON.link(link);
+                   // if(result != '' && this.input.password == result.password) {
+                        //this.$emit("authenticated", true);
+                       // this.$router.replace({ name: "home" });
+                    
+                } else {
+                    alert("A username and password must be present");
+                }
+            },
+
+            signup() {
+                this.$router.replace({ name: "signup" });
+            }
 
 <style scoped>
 #login {
