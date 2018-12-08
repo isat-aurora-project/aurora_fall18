@@ -19,8 +19,10 @@
             </ion-label>
             </ion-item>
         </ion-list>
-        <div class="spacer" style="width: 300px; height: 40px;"></div>
+        <div class="spacer" style="width: 100px; height: 40px;"></div>
         <ion-button type="button" v-on:click="login()" id="login-button1" class="button button-stable button-block" style="display: block; width: 310px; height: 57px; margin-left: auto; margin-right: auto;">Login</ion-button>
+        <div class="spacer" style="width: 300px; height: 40px;"></div>
+        <ion-button type="button" v-on:click="signup()" id="login-button1" class="button button-stable button-block" style="display: block; width: 310px; height: 57px; margin-left: auto; margin-right: auto;">Sign-Up</ion-button>
         
         <div class="spacer" style="height: 40px;"></div>
         <div>
