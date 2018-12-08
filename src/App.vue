@@ -1,13 +1,14 @@
 <template>
   <ion-app>
-    <ion-header style="text-align: center;">
-      <ion-navbar class="bar-light">
-        <ion-nav-back-button></ion-nav-back-button>
-        <router-link v-if="authenticated" to="/home" replace>| Home |</router-link>
-        <router-link v-if="authenticated" to="/upload"> Upload |</router-link>
-        <router-link v-if="authenticated" to="/login" v-on:click.native="logout()" replace> Logout |</router-link>
-      </ion-navbar>
-    </ion-header>
+    <ion-header style="text-align: center;"> 
+      <ion-toolbar style="text-align: center;">
+        <ion-segment>
+          <ion-title><router-link v-if="authenticated" to="/home" replace><h1><ion-button-segment> Home </ion-button-segment></h1></router-link></ion-title>
+          <ion-title><router-link v-if="authenticated" to="/upload"><h1> Upload </h1></router-link></ion-title>
+          <ion-title><router-link v-if="authenticated" to="/login" v-on:click.native="logout()" replace><h1> Logout </h1></router-link></ion-title>
+        </ion-segment>
+      </ion-toolbar>
+    </ion-header> 
     <router-view @authenticated="setAuthenticated"/>
   </ion-app>
 
