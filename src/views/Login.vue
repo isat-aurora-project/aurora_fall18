@@ -1,5 +1,5 @@
 <template>
-    <ion-content padding="true" class="manual-ios-statusbar-padding">
+    <ion-content padding="true" class="has-header-false">
         <div class="spacer" style="width: 300px; height: 60px;"></div>
         <div>
         <img src="img/UpMXuuD3RRmVOyUcWSi2_aurora.png" style="display: block; width: auto; height: auto; margin-left: auto; margin-right: auto;">
