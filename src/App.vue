@@ -15,15 +15,13 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
-  name: "App",
-  data() {
+  name:'App',
+  data(){
     return {
       authenticated: false,
-      mockAccount: {
-        username: "tucker",
-        password: "admin"
-      }
     };
   },
   mounted() {

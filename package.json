@@ -84,6 +84,8 @@
       "src/**/*"
     ],
     "coverageDirectory": "<rootDir>/coverage",
-    "coverageReporters": [ "lcov" ]
+    "coverageReporters": [
+      "lcov"
+    ]
   }
 }
