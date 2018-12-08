@@ -1,17 +1,19 @@
 <template>
-    <div class="signup">
-        <h1>Sign-Up</h1>
-        <input type="text" name="username" v-model="input.username" placeholder="Username" />
-        <br>
-        <input type="text" name="email" v-model="input.email" placeholder="Email" />
-        <br>
-        <input type="password" name="password" v-model="input.password" placeholder="Password" />
-        <br>
-        <input type="password" name="password" v-model="input.confirm" placeholder="Confirm Password" />
-        <br>
-        <button type="button" v-on:click="signup()">Sign-Up Now</button>
-    </div>
-
+    <ion-content padding="true" class="has-header-false">
+        <div class="signup">
+            <img src="img/UpMXuuD3RRmVOyUcWSi2_aurora.png" style="display: block; width: auto; height: auto; margin-left: auto; margin-right: auto;">
+            <h1 style="text-align: center; display: block; width: 310px; height: 57px; margin-left: auto; margin-right: auto;">Sign-Up</h1>
+            <input style="display: block; width: 300px; height: 47px; margin-left: auto; margin-right: auto;" type="text" name="username" v-model="input.username" placeholder="Username" />
+            <br>
+            <input style="display: block; width: 300px; height: 47px; margin-left: auto; margin-right: auto;" type="text" name="email" v-model="input.email" placeholder="Email" />
+            <br>
+            <input style="display: block; width: 300px; height: 47px; margin-left: auto; margin-right: auto;" type="password" name="password" v-model="input.password" placeholder="Password" />
+            <br>
+            <input style="display: block; width: 300px; height: 47px; margin-left: auto; margin-right: auto;" type="password" name="password" v-model="input.confirm" placeholder="Confirm Password" />
+            <br>
+            <ion-button type="button" style="display: block; width: 310px; height: 57px; margin-left: auto; margin-right: auto;" class="button button-stable button-block" v-on:click="signup()">Sign-Up Now</ion-button>
+        </div>
+    </ion-content>
 </template>
 
 <script>
