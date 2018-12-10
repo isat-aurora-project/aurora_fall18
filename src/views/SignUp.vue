@@ -43,6 +43,11 @@
                 axios.post(link,newuser);
                 this.$router.replace({name:"login"});
                 }
+                else {
+                    alert("Oops, something went wrong. Please try again");
+            
+
+            }
 
 
 
