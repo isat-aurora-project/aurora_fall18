@@ -1,7 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
-import Login from "./components/Loginscreen.vue";
+import LoginComponent from "./views/Login.vue";
+import SecureComponent from "./views/Home.vue";
 
 Vue.use(Router);
 
@@ -11,9 +12,28 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "home",
-      component: Home
+      redirect: {
+        name: "login"
+      }
     },
+    {
+      path: "/login",
+      name: "login",
+      component: LoginComponent
+    },
+
+    {
+      path:"/signup",
+      name:"signup",
+      component: () => import("./views/SignUp.vue")
+    },
+
+    {
+      path: "/home",
+      name: "home",
+      component: SecureComponent
+    },
+
     {
       path: "/upload",
       name: "upload",
@@ -22,11 +42,6 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/Upload.vue")
-    },
-    {
-      path: "/login",
-      name: "login",
-      component: Login
     }
   ]
 });

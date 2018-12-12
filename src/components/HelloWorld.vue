@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="home">
     <h1>{{ msg }}</h1>
     <p>
       To upload a light show for Dr. Benton's office, please go to the Upload tab and follow the directions. 

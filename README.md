@@ -1,4 +1,7 @@
-# aurora
+# ISAT Aurora Project
+
+[![Build Status](https://travis-ci.org/isat-aurora-project/aurora.svg?branch=master)](https://travis-ci.org/isat-aurora-project/aurora)
+[![Coverage Status](https://coveralls.io/repos/github/morphatic/aurora/badge.svg)](https://coveralls.io/github/morphatic/aurora)
 
 ## Project setup
 ```
